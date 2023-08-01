@@ -4,12 +4,20 @@ import { ViewGridIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import { useRef } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  // const searchInputRef = 
-  // const search = (e) => {
-  //   e-preventDefault();
-  // };
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const search = (e) => {
+    e.preventDefault();
+    const term = searchInputRef.current.value;
+
+    if (!term) return;
+    router.push(`/search?term=${term}`);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
@@ -50,7 +58,11 @@ export default function Home() {
       sm:max-w-xl lg:max-w-2xl"
         >
           <SearchIcon className="h-5 mr-3 text-gray-500" />
-          <input type="text" className="focus:outline-none flex-grow" />
+          <input
+            ref={searchInputRef}
+            type="text"
+            className="focus:outline-none flex-grow"
+          />
           <img
             className="h-5 mr-1 hover:cursor-pointer"
             src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
@@ -66,8 +78,12 @@ export default function Home() {
           className="flex flex-col w-1/2 space-y-2 justify-center 
       mt-8 sm:space-y-0 sm:flex-row sm:space-x-4"
         >
-          <button onClick="search" className="btn">Google Search</button>
-          <button onClick="search" className="btn">Im Feeling Lucky</button>
+          <button onClick={search} className="btn">
+            Google Search
+          </button>
+          <button onClick={search} className="btn">
+            Im Feeling Lucky
+          </button>
         </div>
       </form>
 
