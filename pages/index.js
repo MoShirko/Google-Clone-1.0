@@ -5,8 +5,12 @@ import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
 
-
 export default function Home() {
+  // const searchInputRef = 
+  // const search = (e) => {
+  //   e-preventDefault();
+  // };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <Head>
@@ -28,6 +32,7 @@ export default function Home() {
           <p className="link">Images</p>
 
           <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
+          {/* <img className="h-5 mr-1 hover:cursor-pointer" src="https://static.thenounproject.com/png/10563-200.png" alt="Google apps"/> */}
 
           <Avatar url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png" />
         </div>
@@ -46,15 +51,23 @@ export default function Home() {
         >
           <SearchIcon className="h-5 mr-3 text-gray-500" />
           <input type="text" className="focus:outline-none flex-grow" />
-          <img className="h-5 mr-1 hover:cursor-pointer" src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024" alt="Search by voice"/>
-          <img className="h-5 ml-3 mr-1 hover:cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png" alt="Search by image"/>
+          <img
+            className="h-5 mr-1 hover:cursor-pointer"
+            src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
+            alt="Search by voice"
+          />
+          <img
+            className="h-5 ml-3 mr-1 hover:cursor-pointer"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
+            alt="Search by image"
+          />
         </div>
         <div
           className="flex flex-col w-1/2 space-y-2 justify-center 
       mt-8 sm:space-y-0 sm:flex-row sm:space-x-4"
         >
-          <button className="btn">Google Search</button>
-          <button className="btn">Im Feeling Lucky</button>
+          <button onClick="search" className="btn">Google Search</button>
+          <button onClick="search" className="btn">Im Feeling Lucky</button>
         </div>
       </form>
 
