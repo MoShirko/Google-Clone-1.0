@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import { ViewGridIcon, MicrophoneIcon } from "@heroicons/react/solid";
+import { ViewGridIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
@@ -46,7 +46,7 @@ export default function Home() {
         >
           <SearchIcon className="h-5 mr-3 text-gray-500" />
           <input type="text" className="focus:outline-none flex-grow" />
-          <MicrophoneIcon className="h-5" />
+          <img className="h-5 mr-1" src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024" alt="Search by voice"/>
         </div>
         <div
           className="flex flex-col w-1/2 space-y-2 justify-center 
