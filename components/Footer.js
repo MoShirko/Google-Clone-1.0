@@ -5,11 +5,11 @@ function Footer() {
   return (
     <footer className="grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 text-sm text-gray-500">
       <div className="grid grid-cols-1 md:gird-col-2 lg:grid-col-3 gap-y-4 px-8 py-3 grid-flow-row-dense">
-        <div className="flex justify-center items-center md:col-span-2 lg:col-span-1 lg:col-start-2">
+        <div className="flex justify-center items-center md:col-span-2 lg:col-span-1 lg:col-start-2 hover:underline cursor-pointer">
           <GlobeIcon className="h-5 mr-1 text-green-700" />
           Our third decade of climate action: join us
         </div>
-        <div className="flex justify-center space-x-8 whitespace-nowrap md:justify-self-start hover:underline cursor-pointer">
+        <div className="flex justify-center space-x-8 whitespace-nowrap md:justify-self-start">
           <p className="hover:underline cursor-pointer">Advertising</p>
           <p className="hover:underline cursor-pointer">Business</p>
           <p className="hover:underline cursor-pointer">How Search works</p>
