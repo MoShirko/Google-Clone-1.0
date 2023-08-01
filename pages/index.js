@@ -46,7 +46,8 @@ export default function Home() {
         >
           <SearchIcon className="h-5 mr-3 text-gray-500" />
           <input type="text" className="focus:outline-none flex-grow" />
-          <img className="h-5 mr-1" src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024" alt="Search by voice"/>
+          <img className="h-5 mr-1 hover:cursor-pointer" src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024" alt="Search by voice"/>
+          <img className="h-5 ml-3 mr-1 hover:cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png" alt="Search by image"/>
         </div>
         <div
           className="flex flex-col w-1/2 space-y-2 justify-center 
