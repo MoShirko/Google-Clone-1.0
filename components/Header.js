@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
 import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 
 
 function Header() {
@@ -52,6 +53,8 @@ function Header() {
       </form>
       <Avatar className="ml-auto" url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png"/>
       </div>
+      {/* Header Options */}
+      <HeaderOptions className=""/>
     </header>
   );
 }
