@@ -63,17 +63,21 @@ export default function Home() {
             type="text"
             className="focus:outline-none flex-grow"
           />
-          <img
-          //voice search
+          <Image
+            //voice search
             className="h-5 mr-1 hover:cursor-pointer"
-            src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
+            src="https://www.freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
             alt="Search by voice"
+            width={15}
+            height={5}
           />
-          <img
-          // image seach
-            className="h-5 ml-3 mr-1 hover:cursor-pointer"
+          <Image
+            // image search
+            className="ml-3 mr-1 hover:cursor-pointer"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
             alt="Search by image"
+            width={20}
+            height={10}
           />
         </div>
         <div
