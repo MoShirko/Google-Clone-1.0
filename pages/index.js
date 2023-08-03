@@ -64,11 +64,13 @@ export default function Home() {
             className="focus:outline-none flex-grow"
           />
           <img
+          //voice search
             className="h-5 mr-1 hover:cursor-pointer"
             src="https://freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
             alt="Search by voice"
           />
           <img
+          // image seach
             className="h-5 ml-3 mr-1 hover:cursor-pointer"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
             alt="Search by image"
