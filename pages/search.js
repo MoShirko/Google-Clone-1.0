@@ -9,7 +9,6 @@ function Search() {
             <title>Search Results</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        {/* Header */}
         <Header />
         {/* Search results */}
     </div>
@@ -17,3 +16,11 @@ function Search() {
 }
 
 export default Search;
+
+export async function getServerSideProps(context) {
+  const useDummyData = false;
+  
+  return {
+    props: {},
+  }
+}
