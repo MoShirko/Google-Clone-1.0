@@ -1,18 +1,22 @@
 import React from 'react'
 import Head from "next/head";
 import Header from "../components/Header";
-import {Response} from "../Response"
+import Response from "../Response"
+import {useRouter} from "next/router";
+import SearchResults from '@/components/SearchResults';
 
 function Search({results}) {
   console.log(results);
+  const router = useRouter();
   return (
     <div>
         <Head>
-            <title>Search Results</title>
+            <title>{router.query.term} - Google Search</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
         {/* Search results */}
+      <SearchResults results={results}/>
     </div>
   )
 }
@@ -25,7 +29,8 @@ export async function getServerSideProps(context) {
 
   const data = useDummyData 
   ? Response
-  : await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${context.query.term}`)
+  : await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}
+  &q=${context.query.term}&start=${startIndex}`)
   .then((response)=> response.json());
   console.log(data);
 
