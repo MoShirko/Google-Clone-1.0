@@ -39,8 +39,10 @@ export default function Home() {
           <p className="link">Gmail</p>
           <p className="link">Images</p>
 
-          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
-          {/* <img className="h-5 mr-1 hover:cursor-pointer" src="https://static.thenounproject.com/png/10563-200.png" alt="Google apps"/> */}
+          {/* <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" /> */}
+          <Image className="h-5 mr-1 hover:cursor-pointer" src="https://www.cdn.icon-icons.com/icons2/2838/PNG/512/view_app_grid_icon_180904.png"
+          alt="Google apps" width={50}
+          height={50} />
 
           <Avatar url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png" />
         </div>

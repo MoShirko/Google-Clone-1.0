@@ -34,10 +34,10 @@ function Header() {
         <XIcon className="h-6 sm:mr-3 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125" onClick={() => (searchInputRef.current.value = "")} />
         <Image
         // voice search
-            className="h-4 mr-3 hidden hover:cursor-pointer sm:inline-flex border-l-2 pl-4 border-gray-300"
+            className="h-4 mr-3 pl-2 hidden hover:cursor-pointer sm:inline-flex border-l-2 border-gray-300"
             src="https://www.freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
             alt="Search by voice"
-            width={10}
+            width={22}
             height={5}
           />
           <Image
