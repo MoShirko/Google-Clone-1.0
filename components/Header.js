@@ -23,9 +23,9 @@ function Header() {
     <header className="sticky top-0 bg-white">
         <div className="flex w-full p-6 items-center">
       <Image
-        src="https://www.pngall.com/wp-content/uploads/5/Google-Logo-PNG-Free-Image.png"
-        height={40}
-        width={120}
+        src="/google_logo.png"
+        height={35}
+        width={90}
         onClick={() => router.push("/")}
         className="cursor-pointer"
       />

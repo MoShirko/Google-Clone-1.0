@@ -39,10 +39,20 @@ export default function Home() {
           <p className="link">Gmail</p>
           <p className="link">Images</p>
 
-          {/* <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" /> */}
-          <Image className="h-5 mr-1 hover:cursor-pointer" src="https://www.cdn.icon-icons.com/icons2/2838/PNG/512/view_app_grid_icon_180904.png"
-          alt="Google apps" width={50}
-          height={50} />
+          {/* <Image
+            className="ml-2 mr-2 hover:cursor-pointer"
+            src="/searchlab.png"
+            alt="Search lab icon"
+            width={20}
+            height={20}
+          /> */}
+          <Image
+            className="hover:cursor-pointer"
+            src="/view_grid.png"
+            alt="Google apps icon"
+            width={25}
+            height={25}
+          />
 
           <Avatar url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png" />
         </div>
@@ -50,9 +60,10 @@ export default function Home() {
 
       <form className="flex flex-col items-center mt-44 flex-grow w-4/5">
         <Image
-          src="https://www.pngall.com/wp-content/uploads/5/Google-Logo-PNG-Free-Image.png"
-          width={300}
+          src="/google_logo.png"
+          width={275}
           height={100}
+          alt="google icon"
         />
         <div
           className="flex w-full mt-5 hover:shadow-lg focus-with:shadow-lg 

@@ -1,7 +1,7 @@
 
 # Google-Clone
 
-This Google Clone project aims to replicate the functionality of a search engine using modern web technologies. Through web scraping, indexing, and ranking algorithms, the clone will be able to retrieve and display relevant search results based on user queries. This project provided us a valuable opportunity to understand search engine mechanics and build our own search engine. 
+Our Google Clone project aims to replicate the functionality of Google’s search engine using modern web technologies. Using Google’s public API the clone is able to retrieve and display relevant search results based on user queries. This project provided us a valuable opportunity to understand search engine mechanics through web scraping, indexing, and ranking algorithms.
 
 ![image](https://github.com/MoShirko/Google-Clone/assets/109438051/eadc6dbc-52b5-42e3-9be2-95381b70e90b)
 
