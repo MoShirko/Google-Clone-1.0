@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import { ViewGridIcon } from "@heroicons/react/solid";
+import { BeakerIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
@@ -43,18 +43,19 @@ export default function Home() {
             className="ml-2 mr-2 hover:cursor-pointer"
             src="/searchlab.png"
             alt="Search lab icon"
-            width={20}
-            height={20}
+            width={18}
+            height={18}
           /> */}
+          <BeakerIcon className="h-6 mr-3 text-gray-500"/>
           <Image
             className="hover:cursor-pointer"
             src="/view_grid.png"
             alt="Google apps icon"
-            width={25}
-            height={25}
+            width={28}
+            height={28}
           />
 
-          <Avatar url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png" />
+          <Avatar className="h-8" url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67" />
         </div>
       </header>
 
