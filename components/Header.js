@@ -55,7 +55,7 @@ function Header() {
           <SearchIcon className="h-6 hidden ml-2 sm:inline-flex text-blue-500 hover:cursor-pointer" />
           <button hidden type='submit' onClick={search}>Search</button>
       </form>
-      <Avatar className="ml-auto" url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png"/>
+      <Avatar className="ml-auto" url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"/>
       </div>
       {/* Header Options */}
       <HeaderOptions className=""/>
