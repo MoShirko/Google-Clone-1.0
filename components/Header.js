@@ -52,7 +52,7 @@ function Header() {
             width={20}
             height={10}
           />
-          <SearchIcon className="h-6 hidden ml-2 sm:inline-flex text-blue-500 hover:cursor-pointer" />
+          <SearchIcon role="searchIcon" className="h-6 hidden ml-2 sm:inline-flex text-blue-500 hover:cursor-pointer" />
           <button hidden type='submit' onClick={search}>Search</button>
       </form>
       <Avatar className="ml-auto" url="https://www.pngkit.com/png/detail/50-503951_profile-circle-profile-pic-in-circle.png"/>

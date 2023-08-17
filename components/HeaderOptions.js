@@ -36,7 +36,7 @@ function HeaderOptions() {
       </div>
       {/* Right */}
       <div className="flex space-x-4">
-        <p role={'settings'}
+        <p role={'toolbar'}
         className="link">Settings</p>
         <p className="link">Tools</p>
       </div>

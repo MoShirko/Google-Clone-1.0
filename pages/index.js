@@ -4,12 +4,21 @@ import { BeakerIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
+  const [theme, setTheme] = useState(false);
+
+  useEffect(() => {
+    if (theme === true) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  });
 
   const search = (e) => {
     e.preventDefault();
@@ -19,8 +28,16 @@ export default function Home() {
     router.push(`/search?term=${term}`);
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    setTheme(!theme);
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div
+      className="flex flex-col items-center justify-center h-screen"
+      id={theme === true ? "dark" : "light"}
+    >
       <Head>
         <title>Google</title>
         <link
@@ -31,13 +48,21 @@ export default function Home() {
 
       <header className="flex w-full p-5 justify-between text-sm text-gray-700">
         <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>
+            About
+          </p>
+          <p className="link" id={theme === true ? "dark" : "light"}>
+            Store
+          </p>
         </div>
 
         <div className="flex space-x-4 items-center">
-          <p className="link">Gmail</p>
-          <p className="link">Images</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>
+            Gmail
+          </p>
+          <p className="link" id={theme === true ? "dark" : "light"}>
+            Images
+          </p>
 
           {/* <Image
             className="ml-2 mr-2 hover:cursor-pointer"
@@ -46,7 +71,10 @@ export default function Home() {
             width={18}
             height={18}
           /> */}
-          <BeakerIcon className="h-6 mr-3 text-gray-500"/>
+          <BeakerIcon
+            className="h-6 mr-3 text-gray-500"
+            id={theme === true ? "dark" : "light"}
+          />
           <Image
             className="hover:cursor-pointer"
             src="/view_grid.png"
@@ -55,7 +83,10 @@ export default function Home() {
             height={28}
           />
 
-          <Avatar className="h-8" url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67" />
+          <Avatar
+            className="h-8"
+            url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"
+          />
         </div>
       </header>
 
@@ -71,8 +102,12 @@ export default function Home() {
       max-w-md rounded-full border border-gray-200 px-5 py-3 items-center 
       sm:max-w-xl lg:max-w-2xl"
         >
-          <SearchIcon className="h-5 mr-3 text-gray-500" />
+          <SearchIcon
+            className="h-5 mr-3 text-gray-500"
+            id={theme === true ? "dark" : "light"}
+          />
           <input
+            id={theme === true ? "dark" : "light"}
             ref={searchInputRef}
             type="text"
             className="focus:outline-none flex-grow"
@@ -98,16 +133,34 @@ export default function Home() {
           className="flex flex-col w-1/2 space-y-2 justify-center 
       mt-8 sm:space-y-0 sm:flex-row sm:space-x-4"
         >
-          <button onClick={search} className="btn">
+          <button
+            onClick={search}
+            id={theme === true ? "darkButton" : "light"}
+            className="btn"
+          >
             Google Search
           </button>
-          <button onClick={search} className="btn">
+          <button
+            onClick={search}
+            id={theme === true ? "darkButton" : "light"}
+            className="btn"
+          >
             Im Feeling Lucky
           </button>
         </div>
       </form>
+      <div>
+        <input type="checkbox" class="checkbox" id="checkbox"
+        onClick={handleClick}
+        />
+        <label for="checkbox" class="checkbox-label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
 
-      <Footer />
+      <Footer theme={theme} />
     </div>
   );
 }
