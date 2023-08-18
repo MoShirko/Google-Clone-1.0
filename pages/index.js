@@ -48,24 +48,18 @@ export default function Home() {
 
       <header className="flex w-full p-5 justify-between text-sm text-gray-700">
         <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
+          <p tabIndex="0" className="link">
+            About
+          </p>
+          <p className="link">Store </p>
         </div>
 
         <div className="flex space-x-4 items-center">
           <p className="link">Gmail</p>
           <p className="link">Images</p>
-
-          {/* <Image
-            className="ml-2 mr-2 hover:cursor-pointer"
-            src="/searchlab.png"
-            alt="Search lab icon"
-            width={18}
-            height={18}
-          /> */}
-          <BeakerIcon className="h-6 mr-3 text-gray-500"/>
+          <BeakerIcon tabIndex="0" className="h-6 mr-3 text-gray-500" />
           <Image
-          tabindex="0"
+            tabIndex="0"
             className="hover:cursor-pointer"
             src="/view_grid.png"
             alt="Google apps icon"
@@ -73,14 +67,18 @@ export default function Home() {
             height={28}
           />
 
-          <Avatar className="h-8" url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67" />
+          <Avatar
+            tabIndex="0"
+            className="h-8"
+            url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"
+          />
         </div>
       </header>
 
       <form className="flex flex-col items-center mt-44 flex-grow w-4/5">
         <Image
           src="/google_logo.png"
-          tabindex="0"
+          tabIndex="0"
           width={275}
           height={100}
           alt="google icon"
@@ -90,7 +88,7 @@ export default function Home() {
       max-w-md rounded-full border border-gray-200 px-5 py-3 items-center 
       sm:max-w-xl lg:max-w-2xl"
         >
-          <SearchIcon className="h-5 mr-3 text-gray-500" />
+          <SearchIcon tabIndex="0" className="h-5 mr-3 text-gray-500" />
           <input
             id={theme === true ? "dark" : "light"}
             ref={searchInputRef}
@@ -100,7 +98,7 @@ export default function Home() {
           />
           <Image
             //voice search
-            tabindex="0"
+            tabIndex="0"
             className="h-5 mr-1 hover:cursor-pointer"
             src="https://www.freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
             alt="Search by voice"
@@ -109,7 +107,7 @@ export default function Home() {
           />
           <Image
             // image search
-            tabindex="0"
+            tabIndex="0"
             className="ml-3 mr-1 hover:cursor-pointer"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
             alt="Search by image"
@@ -138,8 +136,11 @@ export default function Home() {
         </div>
       </form>
       <div>
-        <input type="checkbox" class="checkbox" id="checkbox"
-        onClick={handleClick}
+        <input
+          type="checkbox"
+          class="checkbox"
+          id="checkbox"
+          onClick={handleClick}
         />
         <label for="checkbox" class="checkbox-label">
           <i class="fas fa-moon"></i>
