@@ -62,7 +62,7 @@ function Header() {
           />
           <SearchIcon
             tabIndex="0"
-            role="searchIcon"
+            role="Icon"
             className="h-6 hidden ml-2 sm:inline-flex text-blue-500 hover:cursor-pointer"
           />
           <button hidden type="submit" onClick={search}>
