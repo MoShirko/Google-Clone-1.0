@@ -1,28 +1,8 @@
 import React from "react";
-import { GlobeIcon } from "@heroicons/react/solid";
+import { GlobeIcon, SunIcon, MoonIcon } from "@heroicons/react/solid";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
-import { useRef, useState, useEffect } from "react";
 
-function Footer({ theme }) {
-  useEffect(() => {
-    if (theme === true) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  });
-  const search = (e) => {
-    e.preventDefault();
-    const term = searchInputRef.current.value;
-
-    if (!term) return;
-    router.push(`/search?term=${term}`);
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setTheme(!theme);
-  };
+function Footer({darkTheme, theme}) {
 
   return (
     <footer
@@ -76,7 +56,7 @@ function Footer({ theme }) {
             Terms
           </p>
           {/* <p tabIndex="0" className ="hover:underline cursor-pointer" id={theme === true ? 'dark' : 'light'}>Settings</p> */}
-          <Menu
+          <Menu className="hover:rounder-lg hover:shadow-md"
             menuButton={
               <MenuButton
                 className="hover:underline cursor-pointer"
@@ -88,29 +68,56 @@ function Footer({ theme }) {
             transition
           >
             <MenuItem
-              onClick={handleClick}
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Dark Theme: On
+              Search settings
             </MenuItem>
             <MenuItem
-              onClick={search}
+              id={theme === true ? "darkButton" : "light"}
+              className="rounder-lg shadow-md whitespace-nowrap leading- cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+            >
+              Advanced search
+            </MenuItem>
+            <MenuItem
+              id={theme === true ? "darkButton" : "light"}
+              className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+            >
+              Your data in Search
+            </MenuItem>
+            <MenuItem
+              id={theme === true ? "darkButton" : "light"}
+              className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+            >
+              Search history
+            </MenuItem>
+            <MenuItem
+              id={theme === true ? "darkButton" : "light"}
+              className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+            >
+              Search help
+            </MenuItem>
+            <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Dark Theme: On
+              Search feedback
             </MenuItem>
             <MenuItem
-              onClick={search}
               id={theme === true ? "darkButton" : "light"}
-              className="whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+              className="whitespace-nowrap leading-1 cursor-pointer px-8 width-100% bg-gray-400 h-px border-gray-500"
             >
-              Dark Theme: On
+            </MenuItem>
+            <MenuItem
+              onClick={darkTheme}
+              id={theme === true ? "darkButton" : "light"}
+              className="flex whitespace-nowrap leading-10 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
+            >
+              Dark Theme: {theme === true ? (<> On<MoonIcon className="mx-2 mt-2.5 items-center h-4"/></>) : (<> Off<SunIcon className="mx-2 mt-2.5 items-center h-4"/></>) }
             </MenuItem>
           </Menu>
+          </div>
         </div>
-      </div>
     </footer>
   );
 }
