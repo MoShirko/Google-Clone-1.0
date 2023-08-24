@@ -48,13 +48,13 @@ export default function Home() {
 
       <header className="flex w-full p-5 justify-between text-sm text-gray-700">
         <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>About</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>Store</p>
         </div>
 
         <div className="flex space-x-4 items-center">
-          <p className="link">Gmail</p>
-          <p className="link">Images</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>Gmail</p>
+          <p className="link" id={theme === true ? "dark" : "light"}>Images</p>
 
           {/* <Image
             className="ml-2 mr-2 hover:cursor-pointer"
@@ -63,7 +63,9 @@ export default function Home() {
             width={18}
             height={18}
           /> */}
-          <BeakerIcon className="h-6 mr-3 text-gray-500"/>
+          <BeakerIcon className="h-6 mr-3 text-gray-500"
+          id={theme === true ? "dark" : "light"}
+          />
           <Image
           tabindex="0"
             className="hover:cursor-pointer"
