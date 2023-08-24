@@ -49,16 +49,25 @@ export default function Home() {
       <header className="flex w-full p-5 justify-between text-sm text-gray-700">
         <div className="flex space-x-4 items-center">
           <p tabIndex="0" className="link">
-            About
+           <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
           </p>
-          <p className="link">Store </p>
+          <p className="link">
+          <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+          </p>
         </div>
 
+<<<<<<< HEAD
         <div className="flex space-x-4 items-center"
         data-testid="parent"
         >
           <p className="link">Gmail</p>
           <p className="link">Images</p>
+=======
+        <div className="flex space-x-4 items-center">
+          <p className="link"><a href="https://mail.google.com/mail">Gmail</a></p>
+          <p className="link"><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+          </p>
+>>>>>>> 0282aef0a886f578b195ace917a26cd091c7afcb
           <BeakerIcon tabIndex="0" className="h-6 mr-3 text-gray-500" />
           <Image
             tabIndex="0"
@@ -99,7 +108,7 @@ export default function Home() {
             className="focus:outline-none flex-grow"
             aria-label="Google search"
           />
-          <Image
+          <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjAnq7Et9OAAxU1j2oFHZAQBtYQPAgJ"><Image
             //voice search
             tabIndex="0"
             className="h-5 mr-1 hover:cursor-pointer"
@@ -108,6 +117,8 @@ export default function Home() {
             width={15}
             height={5}
           />
+          </a>
+          <a href="">
           <Image
             // image search
             tabIndex="0"
@@ -117,6 +128,7 @@ export default function Home() {
             width={20}
             height={10}
           />
+          </a>
         </div>
         <div
           className="flex flex-col w-1/2 space-y-2 justify-center 

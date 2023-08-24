@@ -15,7 +15,7 @@ function Footer({darkTheme, theme}) {
           className="flex justify-center items-center md:col-span-2 xl:col-span-3 xl:px-0 hover:underline cursor-pointer"
         >
           <GlobeIcon tabIndex="0" className="h-5 mr-1 text-green-700" />
-          Our third decade of climate action: join us
+         <a href="https://sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Our third decade of climate action: join us</a>
         </div>
         <div className="flex justify-center space-x-8 whitespace-nowrap md:justify-self-start">
           <p
@@ -23,21 +23,22 @@ function Footer({darkTheme, theme}) {
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
           >
-            Advertising
+          <a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
           </p>
           <p
             tabIndex="0"
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
           >
-            Business
+          <a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a>
           </p>
           <p
             tabIndex="0"
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
+            data-testid="pTag"
           >
-            How Search works
+          <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a>
           </p>
         </div>
         <div className="flex justify-center space-x-8 md:ml-auto">
@@ -46,17 +47,17 @@ function Footer({darkTheme, theme}) {
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
           >
-            Privacy
+          <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
           </p>
           <p
             tabIndex="0"
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
           >
-            Terms
+          <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
           </p>
-          {/* <p tabIndex="0" className ="hover:underline cursor-pointer" id={theme === true ? 'dark' : 'light'}>Settings</p> */}
-          <Menu className="hover:rounder-lg hover:shadow-md"
+          <Menu 
+          className="hover:rounder-lg hover:shadow-md"
             menuButton={
               <MenuButton
                 className="hover:underline cursor-pointer"
@@ -71,37 +72,37 @@ function Footer({darkTheme, theme}) {
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Search settings
+             <a href="https://www.google.com/preferences?hl=en&fg=1">Search settings</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading- cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Advanced search
+             <a href="https://www.google.com/advanced_search?hl=en&fg=1">Advanced search</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Your data in Search
+             <a href="https://myaccount.google.com/intro/yourdata/search?utm_source=googlemenu&fg=1&cctld=com">Your data in Search</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Search history
+             <a href="https://www.google.com/history/optout?hl=en&fg=1">Search history</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Search help
+            <a href="https://support.google.com/websearch/?visit_id=638285055819859825-3787376028&hl=en&rd=2#topic=3378866">Search help</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
               className="whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
-              Search feedback
+            <a href="https://www.google.com/preferences?hl=en&fg=1">Search feedback</a>
             </MenuItem>
             <MenuItem
               id={theme === true ? "darkButton" : "light"}
