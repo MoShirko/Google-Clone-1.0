@@ -30,7 +30,7 @@ function SearchResults({ results }) {
         </div>
       ))}
 
-      <PaginationButtons />
+      <PaginationButtons role="pageButtons"/>
     </div>
   );
 }

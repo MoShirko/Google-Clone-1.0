@@ -88,7 +88,7 @@ function Footer({ theme }) {
             transition
           >
             <MenuItem
-              onClick={search}
+              onClick={handleClick}
               id={theme === true ? "darkButton" : "light"}
               className="rounder-lg shadow-md whitespace-nowrap leading-6 cursor-pointer text-sm px-8 text-gray-800 width-100% hover:bg-gray-100 bg-white"
             >
