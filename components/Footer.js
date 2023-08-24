@@ -36,6 +36,7 @@ function Footer({darkTheme, theme}) {
             tabIndex="0"
             className="hover:underline cursor-pointer"
             id={theme === true ? "dark" : "light"}
+            data-testid="pTag"
           >
             How Search works
           </p>
@@ -55,8 +56,8 @@ function Footer({darkTheme, theme}) {
           >
             Terms
           </p>
-          {/* <p tabIndex="0" className ="hover:underline cursor-pointer" id={theme === true ? 'dark' : 'light'}>Settings</p> */}
-          <Menu className="hover:rounder-lg hover:shadow-md"
+          <Menu 
+          className="hover:rounder-lg hover:shadow-md"
             menuButton={
               <MenuButton
                 className="hover:underline cursor-pointer"

@@ -7,6 +7,8 @@ import HeaderOptions from "../components/HeaderOptions";
 import Header from "../components/Header";
 import HeaderOption from "../components/HeaderOption";
 import index from "./index";
+import Avatar from "../components/Avatar";
+import Footer from "../components/Footer";
 // import { render, screen, fireEvent } from "@testing-library/jest-dom/extend-expect"
 /**
  * Verify something should render
@@ -17,9 +19,28 @@ test("HeaderOptions contain toolbar", () => {
   expect(pTag).toContainHTML("Settings");
 });
 
-test("Header contain searchIcon", () => {
-  render(<Header />);
-  const header = new Header();
-  const searchIcon = screen.getByRole("Icon");
-  expect(header).toContain(searchIcon);
+// test("Header contain searchIcon", () => {
+//   render(<Header />);
+//   const header = new Header();
+//   const searchIcon = screen.getByRole("Icon");
+//   expect(header).toContain(searchIcon);
+// });
+
+// test("Avatar contain Image", () => {
+//   render(<Avatar />);
+//   const image = screen.getByAltText("pic");
+//   expect(image).toBe("pic");
+// });
+
+test("Footer contain menu", () => {
+  render(<Footer />);
+  const pTag = screen.getByTestId("pTag");
+  expect(pTag).toContainHTML("How Search works");
 });
+
+test("Header search button exist", () => {
+  render(<Header />);
+  const searchButton = screen.getByType("submit");
+  expect(searchButton).toContainHTML("Search");
+});
+
