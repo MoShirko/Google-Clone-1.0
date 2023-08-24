@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com',"www.pngall.com","www.camo.githubusercontent.com", "www.freepngimg.com","www.static-00.iconduck.com", "upload.wikimedia.org","www.cdn.icon-icons.com", "www.assets.com"],
   },
+  pageExtensions: [pages.js]
 }
 
 module.exports = nextConfig
