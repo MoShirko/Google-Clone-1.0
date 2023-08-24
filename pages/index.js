@@ -28,8 +28,8 @@ export default function Home() {
     router.push(`/search?term=${term}`);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
+    // e.preventDefault();
     setTheme(!theme);
   };
 
@@ -135,21 +135,8 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <div>
-        <input
-          type="checkbox"
-          class="checkbox"
-          id="checkbox"
-          onClick={handleClick}
-        />
-        <label for="checkbox" class="checkbox-label">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <span class="ball"></span>
-        </label>
-      </div>
 
-      <Footer theme={theme} />
+      <Footer theme={theme} darkTheme={handleClick} />
     </div>
   );
 }
