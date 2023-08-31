@@ -56,18 +56,10 @@ export default function Home() {
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="flex space-x-4 items-center"
-        data-testid="parent"
-        >
-          <p className="link">Gmail</p>
-          <p className="link">Images</p>
-=======
         <div className="flex space-x-4 items-center">
           <p className="link"><a href="https://mail.google.com/mail">Gmail</a></p>
           <p className="link"><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
           </p>
->>>>>>> 0282aef0a886f578b195ace917a26cd091c7afcb
           <BeakerIcon tabIndex="0" className="h-6 mr-3 text-gray-500" />
           <Image
             tabIndex="0"
