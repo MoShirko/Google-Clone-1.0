@@ -49,18 +49,30 @@ export default function Home() {
       <header className="flex w-full p-5 justify-between text-sm text-gray-700">
         <div className="flex space-x-4 items-center">
           <p tabIndex="0" className="link">
-           <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+            <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">
+              About
+            </a>
           </p>
           <p className="link">
-          <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+            <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">
+              Store
+            </a>
           </p>
         </div>
 
         <div className="flex space-x-4 items-center">
-          <p className="link"><a href="https://mail.google.com/mail">Gmail</a></p>
-          <p className="link"><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+          <p className="link">
+            <a href="https://mail.google.com/mail">Gmail</a>
           </p>
-          <a href="https://labs.google.com/search/experiments"><BeakerIcon tabIndex="0" className="h-6 hover:cursor-pointer mr-3 text-gray-500" /></a>
+          <p className="link">
+            <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+          </p>
+          <a href="https://labs.google.com/search/experiments">
+            <BeakerIcon
+              tabIndex="0"
+              className="h-6 hover:cursor-pointer mr-3 text-gray-500"
+            />
+          </a>
           <Image
             tabIndex="0"
             className="hover:cursor-pointer"
@@ -70,11 +82,13 @@ export default function Home() {
             height={28}
           />
 
-         <a href="https://mail.google.com/mail"><Avatar
-            tabIndex="0"
-            className="h-8 hover:cursor-pointer"
-            url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"
-          /></a> 
+          <a href="https://mail.google.com/mail">
+            <Avatar
+              tabIndex="0"
+              className="h-8 hover:cursor-pointer"
+              url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"
+            />
+          </a>
         </div>
       </header>
 
@@ -99,26 +113,27 @@ export default function Home() {
             className="focus:outline-none flex-grow"
             aria-label="Google search"
           />
-          <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjAnq7Et9OAAxU1j2oFHZAQBtYQPAgJ"><Image
-            //voice search
-            tabIndex="0"
-            className="h-5 mr-1 hover:cursor-pointer"
-            src="https://www.freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
-            alt="Search by voice"
-            width={15}
-            height={5}
-          />
+          <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjAnq7Et9OAAxU1j2oFHZAQBtYQPAgJ">
+            <Image
+              //voice search
+              tabIndex="0"
+              className="h-5 mr-1 hover:cursor-pointer"
+              src="https://www.freepngimg.com/save/70666-voice-microphone-google-search-logo-png-file-hd/716x1024"
+              alt="Search by voice"
+              width={15}
+              height={5}
+            />
           </a>
           <a href="">
-          <Image
-            // image search
-            tabIndex="0"
-            className="ml-3 mr-1 hover:cursor-pointer"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
-            alt="Search by image"
-            width={20}
-            height={10}
-          />
+            <Image
+              // image search
+              tabIndex="0"
+              className="ml-3 mr-1 hover:cursor-pointer"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
+              alt="Search by image"
+              width={20}
+              height={10}
+            />
           </a>
         </div>
         <div

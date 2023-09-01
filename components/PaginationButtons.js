@@ -20,7 +20,7 @@ function PaginationButtons() {
         <Link href={`/search?term=${router.query.term}&start=${startIndex + 10}`}>
         <div className='flex flex-grow flex-col items-center cursor pointer hover:underline'>
         <ChevronRightIcon tabIndex="0" className='h-5'/>
-        <p tabIndex="0">Next</p>
+        <p data-testid="pTag" tabIndex="0">Next</p>
             </div>
         </Link>
 
