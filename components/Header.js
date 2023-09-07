@@ -1,13 +1,18 @@
+'use client';
+
 import React, { useRef } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
 import Avatar from "./Avatar";
 import HeaderOptions from "./HeaderOptions";
+import { useSearchParams } from "next/navigation"
 
 function Header() {
   const router = useRouter();
-  const searchInputRef = useRef(null);
+  const searchInputRef = useSearchParams(null);
+  
+
 
   const search = (e) => {
     e.preventDefault();

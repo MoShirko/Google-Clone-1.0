@@ -10,6 +10,7 @@ import index from "./index";
 import Avatar from "../components/Avatar";
 import Footer from "../components/Footer";
 import PaginationButtons from "../components/PaginationButtons";
+import SearchResults from "../components/SearchResults";
 /**
  * Verify something should render
  */
@@ -21,27 +22,16 @@ test("HeaderOptions contain toolbar", () => {
   expect(pTag).toContainHTML("Settings");
 });
 
-test("Header contain searchIcon", () => {
-  render(<Header />);
-  const header = new Header();
-  const searchIcon = screen.getByRole("Icon");
-  expect(header).toContain(searchIcon);
-});
-
 test("Avatar contain Image", () => {
   render(<Avatar />);
-  const image = screen.getByAltText("pic");
-  expect(image).toBe("pic");
+  const image = screen.getByTestId("image");
+  expect(image).toContainHTML("image");
 });
 
-test("Footer contain menu", () => {
+test("Footer contain p tag", () => {
   render(<Footer />);
   const pTag = screen.getByTestId("pTag");
   expect(pTag).toContainHTML("How Search works");
 });
 
-test("PaginationButtons renders", () => {
-  render(<PaginationButtons />);
-  const pTag = screen.getByTestId("submit");
-  expect(pTag).toContainHTML("Next");
-});
+

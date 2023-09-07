@@ -14,7 +14,7 @@ function Footer({darkTheme, theme}) {
           tabIndex="0"
           className="flex justify-center items-center md:col-span-2 xl:col-span-3 xl:px-0 hover:underline cursor-pointer"
         >
-          <GlobeIcon tabIndex="0" className="h-5 mr-1 text-green-700" />
+          <GlobeIcon tabIndex="0" className="h-5 mr-1 text-green-700"/>
          <a href="https://sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Our third decade of climate action: join us</a>
         </div>
         <div className="flex justify-center space-x-8 whitespace-nowrap md:justify-self-start">
