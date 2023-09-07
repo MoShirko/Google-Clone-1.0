@@ -1,11 +1,14 @@
+"use client"
+
 import Head from "next/head";
 import Avatar from "../components/Avatar";
 import { BeakerIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect} from "react";
 import { useRouter } from "next/router";
+
 
 export default function Home() {
   const router = useRouter();
@@ -25,7 +28,8 @@ export default function Home() {
     const term = searchInputRef.current.value;
 
     if (!term) return;
-    router.push(`/search?term=${term}`);
+    router.push(`/search?term=${term}&theme`);
+
   };
 
   const handleClick = () => {
@@ -60,7 +64,7 @@ export default function Home() {
           <p className="link"><a href="https://mail.google.com/mail">Gmail</a></p>
           <p className="link"><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
           </p>
-          <BeakerIcon tabIndex="0" className="h-6 mr-3 text-gray-500" />
+          <a href="https://labs.google.com/search/experiments"><BeakerIcon tabIndex="0" className="h-6 hover:cursor-pointer mr-3 text-gray-500" /></a>
           <Image
             tabIndex="0"
             className="hover:cursor-pointer"
@@ -70,12 +74,11 @@ export default function Home() {
             height={28}
           />
 
-          <Avatar
-            data-testid="child"
+         <a href="https://mail.google.com/mail"><Avatar
             tabIndex="0"
-            className="h-8"
+            className="h-8 hover:cursor-pointer"
             url="https://camo.githubusercontent.com/782f5b18398c37040caccfe2387139cde2b7f9e792af2c660a49d2db0330bd9f/68747470733a2f2f7261772e6769746875622e636f6d2f656c61646e6176612f6d6174657269616c2d6c65747465722d69636f6e732f6d61737465722f646973742f706e672f412e706e67"
-          />
+          /></a> 
         </div>
       </header>
 

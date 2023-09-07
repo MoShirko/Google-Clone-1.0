@@ -5,7 +5,7 @@ import Response from "../Response"
 import {useRouter} from "next/router";
 import SearchResults from '@/components/SearchResults';
 
-function Search({results}) {
+function Search({results, theme}) {
   const router = useRouter();
   return (
     <div>
@@ -15,7 +15,7 @@ function Search({results}) {
         </Head>
         <Header />
         {/* Search results */}
-      <SearchResults results={results}/>
+      <SearchResults results={results} theme={theme}/>
     </div>
   )
 }
