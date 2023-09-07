@@ -13,24 +13,26 @@ import PaginationButtons from "../components/PaginationButtons";
 /**
  * Verify something should render
  */
+jest.mock('next/router', () => require('next-router-mock'));
+
 test("HeaderOptions contain toolbar", () => {
   render(<HeaderOptions />);
   const pTag = screen.getByRole("toolbar");
   expect(pTag).toContainHTML("Settings");
 });
 
-// test("Header contain searchIcon", () => {
-//   render(<Header />);
-//   const header = new Header();
-//   const searchIcon = screen.getByRole("Icon");
-//   expect(header).toContain(searchIcon);
-// });
+test("Header contain searchIcon", () => {
+  render(<Header />);
+  const header = new Header();
+  const searchIcon = screen.getByRole("Icon");
+  expect(header).toContain(searchIcon);
+});
 
-// test("Avatar contain Image", () => {
-//   render(<Avatar />);
-//   const image = screen.getByAltText("pic");
-//   expect(image).toBe("pic");
-// });
+test("Avatar contain Image", () => {
+  render(<Avatar />);
+  const image = screen.getByAltText("pic");
+  expect(image).toBe("pic");
+});
 
 test("Footer contain menu", () => {
   render(<Footer />);

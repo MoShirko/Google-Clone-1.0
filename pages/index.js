@@ -1,3 +1,5 @@
+'use client';
+
 import Head from "next/head";
 import Avatar from "../components/Avatar";
 import { BeakerIcon } from "@heroicons/react/solid";
@@ -5,7 +7,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRef, useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
