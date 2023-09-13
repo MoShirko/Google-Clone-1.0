@@ -25,7 +25,6 @@ export default function Home() {
 
   return (
     <div
-    id="formId"
       className="flex flex-col items-center justify-center h-screen"
     >
       <Head>
@@ -127,7 +126,6 @@ export default function Home() {
           </a>
         </div>
         <div
-        id="formButtons"
           className="flex flex-col w-1/2 space-y-2 justify-center 
       mt-8 sm:space-y-0 sm:flex-row sm:space-x-4"
         >

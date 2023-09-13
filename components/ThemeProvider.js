@@ -20,15 +20,17 @@ function ThemeProvider({ children }) {
   document.body.style.color = color;
   document.body.style.backgroundColor = backgroundColor;
 
-  const documentForm = document.getElementById('formId');
-  const divForm = documentForm.getElementsByTagName('form');
-  let formButtons = divForm[0].getElementsByTagName('button');
-  formButtons = Array.prototype.slice.call(formButtons);
-  formButtons.forEach( function(element){
-      element.style.backgroundColor = buttonBackgroundColor;
-      element.style.color = buttonColor; 
+  if(document.body.getElementsByTagName('button')[0]){
+    document.body.getElementsByTagName('button')[0].style.backgroundColor = buttonBackgroundColor;
+    document.body.getElementsByTagName('button')[0].style.color = buttonColor;
+  }
+ 
+  if(document.body.getElementsByTagName('button')[1]){
+    document.body.getElementsByTagName('button')[1].style.backgroundColor = buttonBackgroundColor;
+    document.body.getElementsByTagName('button')[1].style.color = buttonColor;
+  }
 
-  });
+
  })
 
 
