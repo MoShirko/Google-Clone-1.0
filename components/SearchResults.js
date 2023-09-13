@@ -1,6 +1,5 @@
 import React from "react";
 import PaginationButtons from "./PaginationButtons";
-import { useRef, useState, useEffect } from "react";
 
 function SearchResults({ results, theme }) {
 
