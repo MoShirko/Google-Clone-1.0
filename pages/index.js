@@ -27,7 +27,7 @@ export default function Home() {
     <div
       className="flex flex-col items-center justify-center h-screen"
     >
-      <Head>
+      <Head id={theme}>
         <title>Google</title>
         <link
           rel="icon"

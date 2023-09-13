@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/outline";
 import React from "react";
 import HeaderOption from "./HeaderOption";
-function HeaderOptions() {
+function HeaderOptions({theme}) {
   return (
     <div
       className="flex w-full text-gray-700 justify-evenly text-sm 
@@ -16,7 +16,7 @@ function HeaderOptions() {
     border-b-[1px]"
     >
       {/* Left */}
-      <div className="flex space-x-6">
+      <div className="flex space-x-6" id={theme}>
         <HeaderOption tabIndex="0" Icon={SearchIcon} title="All" />
         <HeaderOption tabIndex="0" Icon={PhotographIcon} title="Images" />
         <HeaderOption tabIndex="0" Icon={PlayIcon} title="Videos" />
@@ -25,7 +25,7 @@ function HeaderOptions() {
         <HeaderOption tabIndex="0" Icon={DotsVerticalIcon} title="More" />
       </div>
       {/* Right */}
-      <div className="flex space-x-4">
+      <div className="flex space-x-4" id={theme}>
         <p tabIndex="0" role={"toolbar"} className="link">
           Settings
         </p>
