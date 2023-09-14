@@ -1,21 +1,24 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Head from "next/head";
 import Header from "../components/Header";
 import Response from "../Response"
 import {useRouter} from "next/router";
 import SearchResults from '@/components/SearchResults';
+import { ThemeContext } from '@/components/ThemeProvider';
 
 function Search({results}) {
   const router = useRouter();
+  let {theme} = useContext(ThemeContext);
+
   return (
     <div>
         <Head>
             <title>{router.query.term} - Google Search</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Header theme={theme}/>
         {/* Search results */}
-      <SearchResults results={results}/>
+      <SearchResults results={results} theme={theme}/>
     </div>
   )
 }

@@ -6,21 +6,14 @@ import { BeakerIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import { useRouter } from "next/navigation";
+import { ThemeContext, ThemeProvider } from "@/components/ThemeProvider";
 
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
-  const [theme, setTheme] = useState(false);
-
-  useEffect(() => {
-    if (theme === true) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  });
+  let {toggleTheme, theme} = useContext(ThemeContext);
 
   const search = (e) => {
     e.preventDefault();
@@ -30,17 +23,11 @@ export default function Home() {
     router.push(`/search?term=${term}`);
   };
 
-  const handleClick = () => {
-    // e.preventDefault();
-    setTheme(!theme);
-  };
-
   return (
     <div
       className="flex flex-col items-center justify-center h-screen"
-      id={theme === true ? "dark" : "light"}
     >
-      <Head>
+      <Head id={theme}>
         <title>Google</title>
         <link
           rel="icon"
@@ -48,8 +35,8 @@ export default function Home() {
         />
       </Head>
 
-      <header className="flex w-full p-5 justify-between text-sm text-gray-700">
-        <div className="flex space-x-4 items-center">
+      <header className="flex w-full p-5 justify-between text-sm text-gray-700" id={theme}>
+        <div className="flex space-x-4 items-center"  >
           <p tabIndex="0" className="link">
             <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">
               About
@@ -62,7 +49,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-4 items-center"> 
           <p className="link">
             <a href="https://mail.google.com/mail">Gmail</a>
           </p>
@@ -109,7 +96,7 @@ export default function Home() {
         >
           <SearchIcon tabIndex="0" className="h-5 mr-3 text-gray-500" />
           <input
-            id={theme === true ? "dark" : "light"}
+            id={theme}
             ref={searchInputRef}
             type="text"
             className="focus:outline-none flex-grow"
@@ -143,24 +130,23 @@ export default function Home() {
       mt-8 sm:space-y-0 sm:flex-row sm:space-x-4"
         >
           <button
+            id="darkButton"
             onClick={search}
-            id={theme === true ? "darkButton" : "light"}
             className="btn"
           >
             Google Search
           </button>
-          <a href="https://www.google.com/search?q=i%27m+feeling+lucky&sca_esv=563475517&hl=en&source=hp&ei=mCX6ZLSjBODJkPIPp-Gp-Ao&iflsig=AD69kcEAAAAAZPozqBl-tDw4dLzwYFUXfEIylHUXti9m&ved=0ahUKEwi0z46Bn5mBAxXgJEQIHadwCq8Q4dUDCAs&uact=5&oq=i%27m+feeling+lucky&gs_lp=Egdnd3Mtd2l6IhFpJ20gZmVlbGluZyBsdWNreTILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgARIlCJQzwRYnyFwAXgAkAEAmAGxAaABrwqqAQQxNi4xuAEDyAEA-AEBqAIKwgIQEAAYAxiPARjlAhjqAhiMA8ICEBAuGAMYjwEY5QIY6gIYjAPCAhEQLhiABBixAxiDARjHARjRA8ICDhAuGIAEGLEDGMcBGNEDwgIIEC4YsQMYgATCAgsQLhiABBixAxiDAcICCxAAGIoFGLEDGIMBwgIIEC4YgAQYsQPCAgsQLhiABBixAxjUAsICCxAuGIMBGLEDGIAEwgILEC4Y1AIYsQMYgAQ&sclient=gws-wiz">
-          <div
-            id={theme === true ? "darkButton" : "light"}
+          <button
+            onClick={search}
+            id="darkButton"
             className="btn"
           >
             Im Feeling Lucky
-          </div>
-          </a>
+            </button>
         </div>
       </form>
 
-      <Footer theme={theme} darkTheme={handleClick} />
+      <Footer theme={theme} darkTheme={toggleTheme} />
     </div>
   );
 }

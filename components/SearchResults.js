@@ -1,10 +1,13 @@
 import React from "react";
 import PaginationButtons from "./PaginationButtons";
 
-function SearchResults({ results }) {
+function SearchResults({ results, theme }) {
+
   return (
-    <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52">
-      <p tabIndex="0" className="text-gray-600 text-md mb-5 mt-3">
+    <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52"
+    id={theme === true ? "dark" : "light"}
+    >
+      <p tabIndex="0" className="text-gray-600 text-md mb-5 mt-3" >
         About {results.searchInformation?.formattedTotalResults}
         results ({results.searchInformation?.formattedSearchTime} seconds)
       </p>
@@ -30,7 +33,7 @@ function SearchResults({ results }) {
         </div>
       ))}
 
-      <PaginationButtons />
+      <PaginationButtons/>
     </div>
   );
 }
