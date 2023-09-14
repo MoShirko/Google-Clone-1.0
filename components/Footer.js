@@ -9,7 +9,7 @@ function Footer({darkTheme, theme}) {
       className="grid w-full divide-y-[1px] divide-gray-300 bg-gray-100 text-sm text-gray-500"
       id={theme}
     >
-      <div className="grid grid-cols-1 md:gird-col-2 lg:grid-col-3 xl:grid-col-3 gap-y-4 px-8 py-3 grid-flow-row-dense">
+      <div className="grid grid-cols-1 md:grid-col-2 lg:grid-col-3 xl:grid-col-3 gap-y-4 px-8 py-3 grid-flow-row-dense">
         <div
           tabIndex="0"
           className="flex justify-center items-center md:col-span-2 xl:col-span-3 xl:px-0 hover:underline cursor-pointer"
