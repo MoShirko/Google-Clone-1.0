@@ -144,7 +144,6 @@ export default function Home() {
           </button>
         </div>
       </form>
-
       <Footer theme={theme} darkTheme={toggleTheme} />
     </div>
   );
