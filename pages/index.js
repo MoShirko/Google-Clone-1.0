@@ -59,7 +59,7 @@ export default function Home() {
           <a href="https://labs.google.com/search/experiments">
             <BeakerIcon
               tabIndex="0"
-              className="h-6 hover:cursor-pointer mr-3 text-gray-500"
+              className="h-6 hover:cursor-pointer mr-2 text-gray-500"
             />
           </a>
           <Image

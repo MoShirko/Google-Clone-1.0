@@ -10,9 +10,8 @@ function Avatar({ url, className }) {
     cursor-pointer: transition duration-150 transform hover:scale-110 ${className}`}
       src={url}
       alt="pic"
-      data-testid= "image"
-    height={20}
-    width={30}
+      height={55}
+      width={35}
     />
   );
 }
