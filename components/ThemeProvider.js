@@ -14,7 +14,7 @@ function ThemeProvider({ children }) {
   const backgroundColor = theme === 'light' ? '#FFF' : '#202124';
 
   const buttonColor = theme === 'light' ? '#303134' : '#FFF';
-  const buttonBackgroundColor = theme === 'light' ? '#FFF' : '#303134';
+  const buttonBackgroundColor = theme === 'light' ? '#F1F3F4' : '#303134';
 
  useEffect(()=> {
   document.body.style.color = color;
