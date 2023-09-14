@@ -136,14 +136,12 @@ export default function Home() {
           >
             Google Search
           </button>
-          <a href="https://www.google.com/search?q=i%27m+feeling+lucky&sca_esv=563475517&hl=en&source=hp&ei=mCX6ZLSjBODJkPIPp-Gp-Ao&iflsig=AD69kcEAAAAAZPozqBl-tDw4dLzwYFUXfEIylHUXti9m&ved=0ahUKEwi0z46Bn5mBAxXgJEQIHadwCq8Q4dUDCAs&uact=5&oq=i%27m+feeling+lucky&gs_lp=Egdnd3Mtd2l6IhFpJ20gZmVlbGluZyBsdWNreTILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgARIlCJQzwRYnyFwAXgAkAEAmAGxAaABrwqqAQQxNi4xuAEDyAEA-AEBqAIKwgIQEAAYAxiPARjlAhjqAhiMA8ICEBAuGAMYjwEY5QIY6gIYjAPCAhEQLhiABBixAxiDARjHARjRA8ICDhAuGIAEGLEDGMcBGNEDwgIIEC4YsQMYgATCAgsQLhiABBixAxiDAcICCxAAGIoFGLEDGIMBwgIIEC4YgAQYsQPCAgsQLhiABBixAxjUAsICCxAuGIMBGLEDGIAEwgILEC4Y1AIYsQMYgAQ&sclient=gws-wiz">
-          <div
+          <button
             id="darkButton"
             className="btn"
-          >
+            onClick="https://www.google.com/search?q=i%27m+feeling+lucky&sca_esv=563475517&hl=en&source=hp&ei=mCX6ZLSjBODJkPIPp-Gp-Ao&iflsig=AD69kcEAAAAAZPozqBl-tDw4dLzwYFUXfEIylHUXti9m&ved=0ahUKEwi0z46Bn5mBAxXgJEQIHadwCq8Q4dUDCAs&uact=5&oq=i%27m+feeling+lucky&gs_lp=Egdnd3Mtd2l6IhFpJ20gZmVlbGluZyBsdWNreTILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgARIlCJQzwRYnyFwAXgAkAEAmAGxAaABrwqqAQQxNi4xuAEDyAEA-AEBqAIKwgIQEAAYAxiPARjlAhjqAhiMA8ICEBAuGAMYjwEY5QIY6gIYjAPCAhEQLhiABBixAxiDARjHARjRA8ICDhAuGIAEGLEDGMcBGNEDwgIIEC4YsQMYgATCAgsQLhiABBixAxiDAcICCxAAGIoFGLEDGIMBwgIIEC4YgAQYsQPCAgsQLhiABBixAxjUAsICCxAuGIMBGLEDGIAEwgILEC4Y1AIYsQMYgAQ&sclient=gws-wiz">
             Im Feeling Lucky
-          </div>
-          </a>
+          </button>
         </div>
       </form>
 
